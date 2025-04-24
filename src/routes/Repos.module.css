@@ -1,0 +1,16 @@
+.repos h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.repos_container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    background-color: #115923;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}

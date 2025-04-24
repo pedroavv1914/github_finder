@@ -1,0 +1,67 @@
+.user{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    background-color: #115923;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.user img{
+    width: 170px;
+    height: 170px;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.location svg{
+    fill: white;
+    font-size: 1.5rem;
+}
+
+.location span{
+    color: #86ce98;
+    font-weight: bold;
+}
+
+.stats{
+    display: flex;
+}
+
+.stats div{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.stats div:first-child{
+    border-right: 2px solid white;
+}
+
+.stats .number{
+    background-color: #86ce98;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+.user a{
+    text-align: center;
+    background-color: #2B8C44;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.user a:hover{
+    transform: scale(1.03);
+}
