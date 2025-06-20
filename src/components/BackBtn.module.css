@@ -1,18 +1,37 @@
-.back_btn {
-    box-shadow: var(--shadow-sm);
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    padding: .5rem 1rem;
-    color: var(--foreground);
-    background: var(--highlight-lighter);
-    backdrop-filter: var(--glass-blur);
-    border: var(--highlight-lighter-border);
-    border-radius: var(--radius-sm);
-    transition: all 0.2s ease;
+.backBtn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 }
 
-.back_btn:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-md);
+.backBtn:hover {
+  background: #1a1a2e;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.backBtn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.backBtn svg {
+  transition: transform 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.backBtn:hover svg {
+  transform: translateX(-4px);
 }
