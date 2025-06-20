@@ -83,3 +83,14 @@
   background-color: #1a1a2e;
   transform: scale(1.02);
 }
+
+@media (max-width: 768px) {
+  .repo {
+    padding: 1rem;
+    flex: 1 0 100%;
+  }
+  
+  .repo h3 {
+    font-size: 1.1rem;
+  }
+}

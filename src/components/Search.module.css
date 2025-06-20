@@ -52,3 +52,13 @@
   background: var(--primary-600);
   transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+  .search {
+    flex-direction: column;
+  }
+  
+  .search_container input {
+    width: 100%;
+  }
+}

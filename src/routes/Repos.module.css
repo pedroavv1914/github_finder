@@ -23,3 +23,14 @@
 [data-theme="light"] .repos h2 {
   color: #111827;
 }
+
+@media (max-width: 768px) {
+  .repos_container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .repos h2 {
+    font-size: 1rem;
+  }
+}

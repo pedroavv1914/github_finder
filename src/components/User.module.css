@@ -128,3 +128,15 @@
 .user a:hover {
   transform: scale(1.03);
 }
+
+@media (max-width: 768px) {
+  .user {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 90%;
+  }
+  
+  .user img {
+    width: 120px;
+  }
+}
