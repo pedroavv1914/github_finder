@@ -18,28 +18,46 @@ const Home = () => {
         setError(false)
         setUser(null)
 
-        const res = await fetch(`https://api.github.com/users/${userName}`)
+        try {
+            // Busca dados básicos do usuário
+            const userRes = await fetch(`https://api.github.com/users/${userName}`)
+            
+            if(userRes.status === 404) {
+                setError(true)
+                setIsLoading(false)
+                return
+            }
 
-        const data = await res.json()
+            const userData = await userRes.json()
+            
+            // Busca repositórios para extrair linguagens
+            const reposRes = await fetch(`https://api.github.com/users/${userName}/repos`)
+            const reposData = await reposRes.json()
+            
+            // Processa linguagens dos repositórios
+            const languages: {[key: string]: number} = {}
+            reposData.forEach((repo: {language?: string}) => {
+                if(repo.language) {
+                    languages[repo.language] = (languages[repo.language] || 0) + 1
+                }
+            })
 
-        setIsLoading(false)
+            const {avatar_url, login, location, followers, following, public_repos} = userData
 
-        if(res.status === 404){
+            setUser({
+                avatar_url,
+                login,
+                location,
+                followers,
+                following,
+                public_repos,
+                languages: Object.keys(languages).length > 0 ? languages : undefined
+            })
+        } catch (error) {
             setError(true)
-            return
+        } finally {
+            setIsLoading(false)
         }
-
-        const {avatar_url, login, location, followers, following} = data
-
-        const userData: UserProps ={
-            avatar_url,
-            login,
-            location,
-            followers,
-            following,
-        }
-
-        setUser(userData)
     }
 
     return (
