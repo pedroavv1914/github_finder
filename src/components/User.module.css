@@ -71,6 +71,8 @@
 .user_img_container {
   position: relative;
   align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .user img {
@@ -164,7 +166,8 @@
 
 .stats {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  align-items: center;
   margin-top: 1.5rem;
 }
 
@@ -220,6 +223,7 @@
   position: relative;
   overflow: hidden;
   margin-top: 1.5rem;
+  margin-left: 5px;
 }
 
 .repo_link::before {

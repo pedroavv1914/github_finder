@@ -103,10 +103,10 @@ const User = ({ login, avatar_url, followers, following, location, languages, pu
                         <p>Seguindo:</p>
                         <p className={classes.number}>{following}</p>
                     </div>
+                    <Link to={`/repos/${login}`} className={classes.repo_link}>
+                        Conhecer seus projetos
+                    </Link>
                 </div>
-                <Link to={`/repos/${login}`} className={classes.repo_link}>
-                    Conhecer seus projetos
-                </Link>
             </div>
         </div>
     )
