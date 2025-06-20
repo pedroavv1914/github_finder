@@ -32,30 +32,64 @@
 }
 
 .user {
-  background: var(--profile-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--profile-accent);
+  background: rgba(26, 26, 46, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(76, 201, 240, 0.3);
+  border-radius: 20px;
   padding: 2.5rem;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  box-shadow: 0 4px 12px rgb(255, 253, 253);
   max-width: 600px;
   margin: 2rem auto;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 16px rgba(76, 201, 240, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
   animation: gracefulEntrance 1.2s cubic-bezier(0.25, 0.46, 0.45, 1.5) both;
   will-change: transform, opacity, filter;
   opacity: 0;
 }
 
+.user::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(76, 201, 240, 0.1) 0%,
+    rgba(76, 201, 240, 0) 60%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.user:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(76, 201, 240, 0.2);
+}
+
 .user img {
   width: 180px;
   height: 180px;
-  border: 4px solid var(--profile-accent);
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgb(255, 253, 253);
+  border: 4px solid rgba(76, 201, 240, 0.5);
+  box-shadow: 0 4px 20px rgba(76, 201, 240, 0.3);
+  transition: all 0.3s ease;
+}
+
+.user img:hover {
+  transform: scale(1.05);
+  border-color: rgba(76, 201, 240, 0.8);
 }
 
 .user-info {

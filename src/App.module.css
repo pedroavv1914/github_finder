@@ -1,33 +1,53 @@
 .app {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem;
-  border-radius: var(--radius-lg);
-  background: var(--card-bg);
-  box-shadow: var(--shadow-lg);
-  animation: fadeIn 0.5s ease-out;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
+  border-radius: 20px;
 }
 
-.app h1 {
+.header {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  color: var(--foreground);
+  margin-bottom: 3rem;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  .app {
-    padding: 1rem;
-    margin: 1rem auto;
-    padding-top: 5rem;
-  }
-  
-  .app h1 {
-    font-size: 1.8rem;
-  }
+.header h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #4cc9f0, #f72585);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  font-weight: 800;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.header p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search_container {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  position: relative;
+}
+
+.app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(76, 201, 240, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(247, 37, 133, 0.1) 0%, transparent 20%);
+  z-index: -1;
+  pointer-events: none;
 }
