@@ -2,15 +2,24 @@
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .repos_container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    background-color: #115923;
+    background-color: #1a1a2e;
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.2rem;
+}
+
+[data-theme="light"] .repos_container {
+  background-color: #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+[data-theme="light"] .repos h2 {
+  color: #111827;
 }
