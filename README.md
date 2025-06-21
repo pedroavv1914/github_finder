@@ -6,7 +6,7 @@
 
 A modern web application for searching GitHub users and repositories with dark/light theme support.
 
-🌐 **Live Demo:** Hosted on [Vercel](https://vercel.com/)! [Click here to access the project!](https://your-vercel-project-url.vercel.app) 🚀
+🌐 **Live Demo:** Hosted on [Vercel](https://vercel.com/)! [Click here to access the project!](https://github-finder-pearl-mu.vercel.app/) 🚀
 
 ## ✨ Features
 
