@@ -5,7 +5,7 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import BackBtn from '../components/BackBtn';
 import classes from './Repos.module.css';
-import { GITHUB_TOKEN } from '../config';
+import { GITHUB_TOKEN } from '../config.ts';
 
 interface RepoData {
   name: string;

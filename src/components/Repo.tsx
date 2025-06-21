@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaCodeBranch, FaStar, FaExternalLinkAlt } from 'react-icons/fa';
 import { RepoProps } from '../types/repo';
 import classes from './Repo.module.css';
-import { GITHUB_TOKEN } from '../config';
+import { GITHUB_TOKEN } from '../config.ts';
 
 export default function Repo({
   name,

@@ -4,7 +4,7 @@ import Search from "../components/Search";
 import User from "../components/User";
 import Error from "../components/Error";
 import { UserProps } from "../types/user";
-import { GITHUB_TOKEN } from "../config";
+import { GITHUB_TOKEN } from "../config.ts";
 
 const Home = () => {
 
