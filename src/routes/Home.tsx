@@ -4,7 +4,6 @@ import Search from "../components/Search";
 import User from "../components/User";
 import Error from "../components/Error";
 import { UserProps } from "../types/user";
-import { GITHUB_TOKEN } from "../config.ts";
 
 const Home = () => {
 
@@ -24,8 +23,8 @@ const Home = () => {
             }
 
             const headers = new Headers();
-            if (GITHUB_TOKEN) {
-                headers.append('Authorization', `token ${GITHUB_TOKEN}`);
+            if (import.meta.env.VITE_GITHUB_TOKEN) {
+                headers.append('Authorization', `token ${import.meta.env.VITE_GITHUB_TOKEN}`);
             }
 
             const userUrl = `https://api.github.com/users/${encodeURIComponent(userName)}`

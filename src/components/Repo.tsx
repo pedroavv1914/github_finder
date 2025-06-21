@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { FaCodeBranch, FaStar, FaExternalLinkAlt } from 'react-icons/fa';
 import { RepoProps } from '../types/repo';
 import classes from './Repo.module.css';
-import { GITHUB_TOKEN } from '../config.ts';
 
 export default function Repo({
   name,
@@ -22,15 +21,18 @@ export default function Repo({
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Configurar headers com token se existir
+        const headers = new Headers();
+        if (import.meta.env.VITE_GITHUB_TOKEN) {
+          headers.append('Authorization', `token ${import.meta.env.VITE_GITHUB_TOKEN}`);
+        }
+
         // Buscar linguagens
-        const langRes = await fetch(languages_url);
+        const langRes = await fetch(languages_url, { headers });
         const langData = await langRes.json();
         setLanguages(langData);
         
         // Buscar commits
-        const headers = new Headers();
-        if (GITHUB_TOKEN) headers.append('Authorization', `token ${GITHUB_TOKEN}`);
-        
         const commitsUrl = commits_url.replace('{/sha}', '') + '?per_page=1';
         const commitsRes = await fetch(commitsUrl, { headers });
         

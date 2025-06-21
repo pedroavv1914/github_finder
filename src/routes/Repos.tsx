@@ -5,7 +5,6 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import BackBtn from '../components/BackBtn';
 import classes from './Repos.module.css';
-import { GITHUB_TOKEN } from '../config.ts';
 
 interface RepoData {
   name: string;
@@ -33,8 +32,8 @@ const Repos = () => {
         setError('');
         
         const headers = new Headers();
-        if (GITHUB_TOKEN) {
-          headers.append('Authorization', `token ${GITHUB_TOKEN}`);
+        if (import.meta.env.VITE_GITHUB_TOKEN) {
+          headers.append('Authorization', `token ${import.meta.env.VITE_GITHUB_TOKEN}`);
         }
         
         const res = await fetch(`https://api.github.com/users/${username}/repos`, { headers });
