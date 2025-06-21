@@ -38,6 +38,7 @@
 
 .user {
   background: rgba(26, 26, 46, 0.7);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.09), 0 1.5px 6px 0 rgba(76,201,240,0.07), 0 0 0 2px rgba(76,201,240,0.11);
   backdrop-filter: blur(12px);
   border-radius: 30px;
   padding: 2.5rem;
@@ -86,6 +87,20 @@
     0 10px 30px rgba(0,0,0,0.3),
     0 0 0 5px rgba(26, 26, 46, 0.7);
   transition: all 0.5s ease;
+}
+
+[data-theme="light"] .user {
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 8px 36px 0 rgba(76,201,240,0.09), 0 0 0 2px rgba(76,201,240,0.11);
+  border: 1.5px solid #b6e4fa;
+  color: #334155;
+  transition: box-shadow 1.5s cubic-bezier(0.4,0,0.2,1), border-color 1.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.user:hover {
+  box-shadow: 0 16px 48px 0 rgba(76,201,240,0.17), 0 0 0 2px #4cc9f0;
+  border-color: #4cc9f0;
+  transition: box-shadow 1.5s cubic-bezier(0.4,0,0.2,1), border-color 1.5s cubic-bezier(0.4,0,0.2,1);
 }
 
 .user:hover img {
@@ -303,11 +318,34 @@
   min-width: 80px;
   text-align: right;
 }
+[data-theme="light"] .language_item span:first-child {
+  color: #334155;
+  font-weight: 700;
+}
+
+[data-theme="light"] .language_name {
+  color: #334155;
+  font-weight: 700;
+}
+
 
 .language_item span:last-child {
-  min-width: 40px;
-  text-align: left;
+  min-width: 36px;
+  text-align: right;
+  font-size: 0.98rem;
+  color: var(--foreground);
+  font-weight: 700;
 }
+[data-theme="light"] .language_item span:last-child {
+  color: #4895ef;
+  font-weight: 700;
+}
+
+[data-theme="light"] .language_percent {
+  color: #4895ef;
+  font-weight: 700;
+}
+
 
 .languages_simple {
   margin: 0.5rem 0;

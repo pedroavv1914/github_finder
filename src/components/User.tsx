@@ -70,14 +70,14 @@ const User = ({ login, avatar_url, followers, following, location, languages, pu
                         {normalizedLangs.map((lang) => (
                             <div key={lang.name} className={classes.language_item}>
                                 {getLanguageIcon(lang.name)}
-                                <span>{lang.name}</span>
+                                <span className={classes.language_name}>{lang.name}</span>
                                 <div className={classes.language_bar}>
                                     <div
                                         className={classes.language_fill}
                                         style={{ width: `${lang.percentage}%` }}
                                     />
                                 </div>
-                                <span>{lang.percentage}%</span>
+                                <span className={classes.language_percent}>{lang.percentage}%</span>
 
                                 <div className={classes.language_tooltip}>
                                     Usada em {Math.round((lang.percentage / 100) * (public_repos || 0))} repositórios

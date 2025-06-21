@@ -38,9 +38,12 @@
 }
 
 .repo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
-  border-color: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 16px 48px 0 rgba(76,201,240,0.17), 0 0 0 2px #4cc9f0;
+  border-color: #4cc9f0;
+  transition: border-color 1.5s, box-shadow 1.5s cubic-bezier(0.4,0,0.2,1), background 0.9s;
+}
+[data-theme="light"] .repo:hover {
+  background: rgba(255,255,255,0.99);
 }
 
 .repo h3 {
