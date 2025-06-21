@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   gap: 1rem;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 50%, #16213e 100%);
