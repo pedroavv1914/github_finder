@@ -7,13 +7,10 @@ export default function Repo({
   name,
   html_url,
   languages_url,
-  language,
   forks_count,
   stargazers_count,
   commits_url,
-  pushed_at,
-  description,
-  fork
+  description
 }: RepoProps) {
   const [languages, setLanguages] = useState<{[key: string]: number}>({});
   const [commitCount, setCommitCount] = useState<number | null>(null);
