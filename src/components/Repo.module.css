@@ -42,9 +42,57 @@
   border-color: #4cc9f0;
   transition: border-color 1.5s, box-shadow 1.5s cubic-bezier(0.4,0,0.2,1), background 0.9s;
 }
+
+[data-theme="light"] .repo {
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.09), 0 1.5px 6px 0 rgba(76,201,240,0.07), 0 0 0 2px rgba(76,201,240,0.11);
+  border: 1.5px solid #b6e4fa;
+  color: #192331;
+  transition: box-shadow 1.5s cubic-bezier(0.4,0,0.2,1), border-color 1.5s cubic-bezier(0.4,0,0.2,1);
+}
+
 [data-theme="light"] .repo:hover {
   background: rgba(255,255,255,0.99);
+  border-color: #192331 !important;
+  box-shadow: 0 8px 32px rgba(25,35,49,0.13), 0 1.5px 6px 0 rgba(25,35,49,0.10), 0 0 0 2px #19233144;
+  transition: box-shadow 1.5s cubic-bezier(0.4,0,0.2,1), border-color 1.5s cubic-bezier(0.4,0,0.2,1), background 0.9s;
 }
+
+[data-theme="light"] .repo,
+[data-theme="light"] .repo *,
+[data-theme="light"] .repo h3,
+[data-theme="light"] .repo .repo_header h3,
+[data-theme="light"] .repo .repo_stats,
+[data-theme="light"] .repo .repo_stats span,
+[data-theme="light"] .repo p,
+[data-theme="light"] .repo .description,
+[data-theme="light"] .repo_link,
+[data-theme="light"] .repo .repo_link,
+[data-theme="light"] .repo_language,
+[data-theme="light"] .repo .language_badge,
+[data-theme="light"] .repo .language_bar span,
+[data-theme="light"] .repo .language_bar span:last-child,
+[data-theme="light"] .repo .language_bar span:first-child,
+[data-theme="light"] .repo .repo_date {
+  color: #192331 !important;
+}
+
+[data-theme="light"] .repo h3,
+[data-theme="light"] .repo .repo_header h3,
+[data-theme="light"] .repo_stats,
+[data-theme="light"] .repo_stats span {
+  color: #24292e !important;
+}
+
+[data-theme="light"] .repo_link,
+[data-theme="light"] .repo .repo_link,
+[data-theme="light"] .repo_language,
+[data-theme="light"] .repo .language_badge,
+[data-theme="light"] .repo .language_bar span,
+[data-theme="light"] .repo .language_bar span:last-child {
+  color: #4895ef !important;
+}
+
 
 .repo h3 {
   color: #24292e;
@@ -199,8 +247,11 @@
   position: relative;
 }
 
-.repo_header h3 a:hover {
-  color: #a78bfa; /* Tom de roxo mais claro */
+[data-theme="light"] .repo_header h3 a:hover {
+  color: #a78bfa;
+}
+[data-theme="dark"] .repo_header h3 a:hover {
+  color: #60a5fa;
 }
 
 .repo_date {
