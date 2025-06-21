@@ -4,6 +4,7 @@ import Search from "../components/Search";
 import User from "../components/User";
 import Error from "../components/Error";
 import { UserProps } from "../types/user";
+import classes from './Home.module.css';
 
 const Home = () => {
 
@@ -83,7 +84,11 @@ const Home = () => {
     return (
         <div>
             <Search loadUser={loadUser} loading={isLoading} />
-            {user && <User {...user}/>}
+            {user && (
+              <div className={classes.profileContainer}>
+                <User {...user} />
+              </div>
+            )}
             {error && <Error message={error} />}
         </div>
     )
