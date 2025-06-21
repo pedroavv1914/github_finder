@@ -1,7 +1,10 @@
-export type RepoProps = {
-    name: string;
-    html_url: string;
-    language: string;
-    stargazers_count: number;
-    forks_count: number;
-};
+export interface RepoProps {
+    name: string
+    language: string
+    html_url: string
+    forks_count: number
+    stargazers_count: number
+    description?: string
+    fork: boolean
+    languages_url: string
+}
