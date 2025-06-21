@@ -47,6 +47,11 @@
   color: #24292e;
   margin-bottom: 1rem;
   font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
 }
 
 .repo p {
@@ -358,6 +363,7 @@
   }
   
   .repo h3 {
+    max-width: 90vw;
     font-size: 1.1rem;
   }
 }
